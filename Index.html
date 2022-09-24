@@ -19,6 +19,8 @@
             <h3>Your current tasks</h3>
 
             <button id="hide-info">Hide/Show</button>
+
+            <div id="taskList"></div>
         </section>
 
         <section class="info-table">
@@ -33,32 +35,37 @@
 
             <div class="my-control">
                 <label>Title</label>
-                <input type="text">
+                <input id="txtTitle" type="text">
             </div>
 
             <div class="my-control">
                 <label>Description</label>
-                <input type="text">
+                <textarea id="txtDescription" rows="3"></textarea>
             </div>
 
             <div class="my-control">
                 <label>Due Date</label>
-                <input type="text">
+                <input id="txtDueDate" type="date">
             </div>
 
             <div class="my-control">
                 <label>Tag</label>
-                <input type="text">
+                <input id="txtTag" type="text">
             </div>
 
             <div class="my-control">
                 <label>Category</label>
-                <input type="text">
+                <select id="txtCategory">
+                    <option value="work">Work</option>
+                    <option value="home">Home</option>
+                    <option value="family">Family</option>
+                    <option value="personal">Personal</option>
+                </select>               
             </div>
 
             <div class="my-control">
                 <label>Color</label>
-                <input type="text">
+                <input id="txtColor" type="color">
             </div>
 
             <div class="my-control">
@@ -72,7 +79,9 @@
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"
         integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
         crossorigin="anonymous"></script>
+    <script src="./scripts/task.js"></script>    
     <script src="./scripts/app.js"></script>
+    
     
 </body>
 </html>

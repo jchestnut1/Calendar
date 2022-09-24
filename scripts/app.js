@@ -4,7 +4,47 @@ var isImportant = false;
 var hideInformation = false;
 
 function saveTask(){
-    console.log("Button Clicked");
+    
+let title = $("#txtTitle").val();
+let description = $("#txtDescription").val();
+let dueDate = $("#txtDueDate").val();
+let tag = $("#txtTag").val();
+let category = $("#txtCategory").val();
+let color = $("#txtColor").val();
+
+let task = new Task(title,description,tag,category,color,dueDate)
+displayTask(task);
+clearForm();
+}
+
+function clearForm(){
+    $("#txtTitle").val("");
+    $("#txtDescription").val("");
+    $("#txtDueDate").val("");
+    $("#txtColor").val("");
+    $("#txtTag").val("");
+    $("#txtColor").val("");
+}
+
+function displayTask(task){
+    
+    let syntax = `<div class="task"> 
+        
+    <div class="name">
+        <h3>${task.title}</h3>
+        <p>${task.description}</p>
+    </div>
+
+    <label class="date">${task.dueDate}</label>
+
+    <div class="extra">
+        <label>${task.category}</label>
+        <label>${task.tag}</label>
+    </div>
+
+    </div>`;
+
+    $("#taskList").append(syntax);
 }
 
 function changeIcon(){

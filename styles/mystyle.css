@@ -39,7 +39,7 @@ h3{
     text-align: right;    
 }
 
-.my-control input {
+.my-control input, .mycontrol textarea, .my-control select{
     padding: 3px 5px;
     margin-left: 5px;
 }
@@ -53,3 +53,31 @@ h3{
 .my.icon.fas {
     color: green;
 }
+
+.task{
+    border: 1px solid black;
+    margin-bottom: 20px;
+    padding: 5px 10px;
+}
+
+#taskList{
+    display: flex;
+    display: block;
+}
+
+#taskList .name{
+    flex: 1;
+    border: 1px dotted black;
+}
+
+#taskList .date{
+    flex: 1;
+    border: 1px dotted black;
+    width: 100%;
+}
+
+#taskList .extra{
+    flex: 1;
+
+}
+
