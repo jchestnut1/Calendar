@@ -1,0 +1,55 @@
+h1{
+    background-color: darkgray;
+    color: white;
+    margin: 0;
+    padding: 5px 0;
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    min-height: 900px;
+    background-color: rgb(28, 124, 148);
+}
+
+h3{
+    text-align: center;
+    font-size: 40px;
+    font-family: 'segoe UI',;
+}
+
+.container .list{
+    flex: 3;
+}
+
+.container .info-table{
+    flex: 1;
+    background-color: rgba(111, 0, 255, 0.432);
+    font-family: "segoe ui";
+}
+
+.my-control {
+    margin-bottom: 10px;
+}
+
+.my-control label {
+    margin-left: 0;
+    display: inline-block;
+    width: 80px;
+    text-align: right;    
+}
+
+.my-control input {
+    padding: 3px 5px;
+    margin-left: 5px;
+}
+
+.my-icon{
+    color: red;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.my.icon.fas {
+    color: green;
+}
