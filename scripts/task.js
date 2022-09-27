@@ -7,5 +7,6 @@ class Task{
         this.tag = tag;
         this.color = color;
         this.dueDate = dueDate; 
+        this.name = "Jay";
     }
 }

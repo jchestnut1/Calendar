@@ -12,9 +12,21 @@ let tag = $("#txtTag").val();
 let category = $("#txtCategory").val();
 let color = $("#txtColor").val();
 
-let task = new Task(title,description,tag,category,color,dueDate)
-displayTask(task);
-clearForm();
+let task = new Task(title,description,tag,category,color,dueDate);
+
+$.ajax({
+    type: "POST",
+    url: "https://fsdiapi.azurewebsites.net/api/tasks/",
+    data: JSON.stringify(task),
+    contentType: "application/json",
+    success: function(response) {
+        displayTask(task);
+        clearForm();
+    },
+    error: function(details) {
+        console.log("Save Failed", details);
+    },
+})
 }
 
 function clearForm(){
@@ -68,8 +80,29 @@ function toggleSection(){
     
 }
 
+function fetchTask(){
+    $.ajax({
+        type: "GET",
+        url: "https://fsdiapi.azurewebsites.net/api/tasks/",
+        success: function(response){
+            console.log("Fetch response",response);
+            let allTasks = JSON.parse(response);
+            for(let i=0; i<allTasks.length; i++){
+                let task = allTasks[i];
+                if(task.name == "Jay"){
+                displayTask(task);
+                }
+            }
+        },
+        eror: function(details){
+            console.log("Error",details);
+        }
+    });
+}
+
 function init() {
     console.log("Task Manager");
+    fetchTasks();
 
     $("#btnSave").click(saveTask);
     $("#important").click(changeIcon);

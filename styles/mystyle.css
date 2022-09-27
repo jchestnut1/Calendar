@@ -1,15 +1,17 @@
 h1{
-    background-color: darkgray;
-    color: white;
+    background-color: lightblue;
+    color: black;
     margin: 0;
-    padding: 5px 0;
+    padding: 5px;
     text-align: center;
 }
 
 .container{
     display: flex;
     min-height: 900px;
-    background-color: rgb(28, 124, 148);
+    background-image: url("https://www.bing.com/th?id=OIP.SWAmM6XrxyRr7trAndKDewHaFj&w=150&h=113&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 h3{
@@ -22,9 +24,14 @@ h3{
     flex: 3;
 }
 
+.container .list h3{
+    color: white;
+    text-decoration: underline;
+}
+
 .container .info-table{
     flex: 1;
-    background-color: rgba(111, 0, 255, 0.432);
+    background-color: lightblue;
     font-family: "segoe ui";
 }
 
@@ -34,14 +41,13 @@ h3{
 
 .my-control label {
     margin-left: 0;
-    display: inline-block;
-    width: 80px;
-    text-align: right;    
+    display: block;
+       
 }
 
 .my-control input, .mycontrol textarea, .my-control select{
     padding: 3px 5px;
-    margin-left: 5px;
+    width: 70%;
 }
 
 .my-icon{
